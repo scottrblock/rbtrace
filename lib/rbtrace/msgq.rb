@@ -5,7 +5,7 @@ module MsgQ
   ffi_lib FFI::CURRENT_PROCESS
 
   class EventMsg < FFI::Struct
-    BUF_SIZE = RUBY_PLATFORM =~ /linux/ ? 256 : 120
+    BUF_SIZE = 256
     IPC_NOWAIT = 004000
 
     layout :mtype, :long,
